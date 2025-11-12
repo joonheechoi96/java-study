@@ -16,6 +16,8 @@ public class LongExample {
 		System.out.println(var1);
 		System.out.println(var2);
 		System.out.println(var4);
+		System.out.println('1'-'0');
+		System.out.println('1'-0);
 	}
 
 }

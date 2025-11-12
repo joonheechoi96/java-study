@@ -25,7 +25,7 @@ public class FloatDoubleExample {
 		
 		// (10의 지수를 나타내는) e 사용하기
 		double var6 = 3e6; // 3.0 * 10^6
-//		int var = 3e6; // E 또는 e가 포함되면 실수 리터럴
+//		int var = 3e6; // E 또는 e가 포함되면 실수 리터럴★★★★
 		float var7 = 3e6F;
 		double var8 = 2e-3; // 2.0 * 10^-3
 		

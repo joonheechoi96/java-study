@@ -24,7 +24,7 @@ public class PromotionExample {
 		System.out.println("doubletValue: " + doubleValue);
 		
 		// 주의! byte -> char 타입으로 자동 형변환 불가능 ~~
-		byte byteVal = 65;
+//		byte byteVal = 65;	
 //		char charVal = byteVal; // char는 byte와 달리 음수를 포함하지 않기 때문에 x.
 		
 		int intValue2 = 7000;
