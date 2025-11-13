@@ -14,7 +14,7 @@ public class ScannerExample2 {
 	    // 결과값으로는 -> 개행 문자 전까지의 문자열만 반환
 	    // 개행 문자는 버퍼에서 제거되지만, 반환값에 포함되지 않음
 		
-		System.out.println("단어를 입력하세요.");
+		System.out.print("단어를 입력하세요.");
 		while (sc.hasNext()) {
 			String nextWord = sc.next();
 			if ("quit".equals(nextWord)) break;

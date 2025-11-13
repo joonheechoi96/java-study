@@ -18,7 +18,9 @@ public class Homework01 {
 		System.out.print("키(m): ");
 		double height = sc.nextDouble();
 		double bmi = weight / (height * height);
-		System.out.printf("BMI 지수 : %4.2f " , bmi);
+		System.out.printf("BMI 지수 : %.1f/n " , bmi);
+		System.out.printf("BMI 지수 : " + (int) (bmi * 10) / 10.0);
+		System.out.printf("BMI 지수 : " + Math.floor(bmi * 10) / 10.0);
 		
 		sc.close();
 	}

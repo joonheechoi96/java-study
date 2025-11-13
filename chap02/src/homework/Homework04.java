@@ -9,7 +9,7 @@ public class Homework04 {
 		
 		System.out.print("문자를 입력하세요 : ");
 		char input = sc.nextLine().charAt(0);
-		int result = (int) input;
+		int result = input;
 		System.out.println(input + "의 유니코드 : " + result);
 	}
 
