@@ -29,7 +29,7 @@ public class CastingExample {
 		long number = sc.nextLong();
 		System.out.println((int)number);
 	    
-	
+		sc.close();
 	}
 
 }

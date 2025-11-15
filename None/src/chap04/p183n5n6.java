@@ -9,6 +9,12 @@ public class p183n5n6 {
 			result += "*";
 			System.out.println(result);
 		}
+		
+		String result2 = "";
+		for (int i=1; i <= 4; i++) {
+			result2 += "*";
+			System.out.printf("%4s\n",result2);
+		}
 	}
 
 }
