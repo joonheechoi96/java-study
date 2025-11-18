@@ -23,6 +23,10 @@ public class Homework06 {
 		int average = (a + b + c + d + e)/5;
 		String result;
 		
+		
+		// 불합격 케이스를 먼저 걸러냄ㅁ
+		
+		
 		if (a >= 40 && b >= 40 && c >= 40 && d >= 40 && e >= 40) {
 			if (average >= 60) {
 				result = "합격을 축하합니다!";

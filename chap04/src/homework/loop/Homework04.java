@@ -6,7 +6,7 @@ public class Homework04 {
 
 	public static void main(String[] args) {
 
-		String input = "yes";
+		String input = "";
 		
 		do {
 			System.out.println("게임을 실행합니다!");

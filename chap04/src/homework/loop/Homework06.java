@@ -4,32 +4,33 @@ public class Homework06 {
 
 	public static void main(String[] args) {
 		
-		String tree = "";
+		String left = "";
+		String right = "";
 		
-		for (int i = 1; i <= 9; i++) {
-				if (i%2 == 0) {
-					tree += "*";
+		for (int i = 1; i <= 5; i++) {
+			left += "*";
+			for (int j = 1; j <= 1; j++) {			
+				if (i == 1) {
+					System.out.printf("%5s\n" , left);
 					continue;
-				} else {
-					tree += "*";
+				} right += "*";
+				
+				System.out.printf("%5s%-4s\n" , left , right);
 				}
-			for (int j = 0; j <= 1; j++) {
-				tree = tree + " ";
-			}	System.out.printf("%7s\n" ,tree);
-		}	
+			}
+		
+		System.out.println();
+		
+		for (int i = 1; i <= 5; i++) {
+			for (int j = 1; j <= 5 - i; j++) {
+				System.out.print(" ");
+			}
+			for (int j = 1; j <= 2 * i - 1; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
 
-		String a = " ";
-		String b = "^";
-		
-		System.out.println(a + b);
-		System.out.println(a + b + b);
-		System.out.println(a + b + b + b);
-		System.out.println(a + b + b + b + b);
-		System.out.printf("%7s\n" ,b + a);
-		System.out.printf("%7s\n" ,b + a + a);
-		System.out.printf("%7s\n" ,b + b + a + a + a);
-		System.out.printf("%7s\n" ,b + b + b + a + a + a + a);
-		
 }
 	
 }

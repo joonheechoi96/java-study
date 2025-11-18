@@ -7,19 +7,20 @@ public class Homework03 {
 	public static void main(String[] args) {
 		
 		
-		while (true) {
-			Scanner sc = new Scanner(System.in);
-			System.out.print("입력 : ");
+		Scanner sc = new Scanner(System.in);
+
+		for (;;) {
+			System.out.print("입력: ");
 			String input = sc.nextLine();
-			if (input.equals("탈출")) {
-				System.out.println("프로그램 종료");
+			
+			if ("탈출".equals(input)) {
 				break;
-			} else {
-				System.out.println(input);
-				continue;
 			}
+			
+			System.out.println(input);
 		}
 		
+		System.out.println("프로그램 종료");
 	}
 
 }

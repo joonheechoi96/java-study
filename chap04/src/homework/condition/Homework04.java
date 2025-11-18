@@ -9,7 +9,9 @@ public class Homework04 {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("수집된 코드 : ");	
 		int code = sc.nextInt();
-		String sit;
+		
+		
+		String sit; // 빈 문자열로 초기화 하는 것이 안전성 측면에서 좋음.
 		
 		switch (code) {
 			case 400 :

@@ -10,13 +10,14 @@ public class Homework05 {
 			Scanner sc = new Scanner(System.in);
 			System.out.print("숫자(0을 입력하면 종료) : ");
 			int num = sc.nextInt();
-			if (num < 0) {
-				continue;
-			} else if (num > 0) {
-				sum += num;
-			} else {
-				break;
-			}
+			/*
+			 * if (num < 0) { continue; } else if (num > 0) { sum += num; } else { break; }
+			 */
+			
+			if (num < 0) continue;
+			if (num == 0) break;
+			
+			sum += num;
 		} System.out.println("양수의 합계 : " + sum);
 	}
 

@@ -14,21 +14,15 @@ public class Homework03 {
 		System.out.print("세 번째 정수 : ");
 		int c = sc.nextInt();
 		
-		int min ;
 		
-		if (a <= b) {
-			if (a <= c) {
-				min = a;
-			} else {
-				min = c;
-			}
-		} else { 
-			if (b <= c) {
-				min = b;
-			} else {
-				min = c;
-			}
-		}
+		int min = a;
+		if (min > b) min = b;
+		if (min > c) min = c;
+		
+		/*
+		 * if (a <= b) { if (a <= c) { min = a; } else { min = c; } } else { if (b <= c)
+		 * { min = b; } else { min = c; } }
+		 */
 			System.out.println("세 수 중에서 가장 작은 수는 " + min + "입니다.");
 	}
 

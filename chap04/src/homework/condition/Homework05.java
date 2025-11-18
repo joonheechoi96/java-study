@@ -15,11 +15,14 @@ public class Homework05 {
 			System.out.print("");
 			
 			int num = sc.nextInt();
-			String result;
+			String result = "";
 			
 			if (num <= 0) {
-				result = "양수만 입력해주세요.";
-			} else if (num == 1) {
+				System.out.println("양수만 입력해주세요.");
+				return;
+			}
+			
+			if  (num == 1) {
 				result = "스쿼트 운동 시간입니다.";
 			} else if (num == 2) {
 				result = "데드리프트 운동 시간입니다.";
