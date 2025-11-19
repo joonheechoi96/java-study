@@ -9,7 +9,7 @@ public class Homework06 {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("배열의 크기를 입력하세요 : ");
 		int leng = sc.nextInt();
-		sc.nextLine();
+		sc.nextLine(); // 개행 문자 제거 !
 		String[] arr = new String[leng];
 		
 		
