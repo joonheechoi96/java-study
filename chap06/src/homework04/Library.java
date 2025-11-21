@@ -1,4 +1,4 @@
-package homework10;
+package homework04;
 
 public class Library {
 	int x;
