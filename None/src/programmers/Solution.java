@@ -1,22 +1,32 @@
 package programmers;
 
-import java.util.Iterator;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Solution {
 	
-	public static void main(String[] args) {
-		int x = 9000000;
-		int n = 500;
-		
-		 long[] answer = {};
-	        answer = new long[n];
-	        for (int i = 0; i < n; i++) {
-	            answer[i] =  x + (long) x*i;
+	 public List<Integer> solution(int[] answers) {
+		 	List<Integer> list = new ArrayList<>();
+	        int[] score = new int[3];
+	        int[] aStyle = {1,2,3,4,5,1,2,3,4,5};
+	        int[] cStyle = {3,3,1,1,2,2,4,4,5,5};
+	        int[] bStyle = {2,1,2,3,2,4,2,5};
+	        for(int i = 0; i < answers.length; i++){
+	        	score[0] = answers[i] == aStyle[i % aStyle.length] ? score[0] + 1 : score[0];
+	            score[1] = answers[i] == bStyle[i % bStyle.length] ? score[1] + 1 : score[1];
+	            score[2] = answers[i] == cStyle[i % cStyle.length] ? score[2] + 1 : score[2];
 	        }
 	        
-	      for (int i = 0; i < answer.length; i++) {
-			System.out.print(answer[i] + " ");
-		}
-	}
-
+	        int maxScore = Math.max(Math.max(score[0],score[1]),score[2]);
+	        for(int i = 0; i < score.length; i++) {
+	        	if (score[i] == maxScore) {
+	        		list.add(i+1);
+	        	}
+	        }
+	        
+	        
+	        return list;
+	        
+	    }
+	
 }
