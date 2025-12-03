@@ -1,5 +1,6 @@
 package chap13.sec01.exam08;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -15,14 +16,28 @@ public class TreeSetExample {
 		
 //		Set<String> set = new HashSet<String>();
 //		Set<String> set = new LinkedHashSet<String>();
-		Set<String> set = new TreeSet<String>();
+//		Set<String> set = new TreeSet<String>(); // Comparable로 구현한 기본 정렬 
 		
-		
+		// 기본 정렬 기준 외 - TreeSet 생성자에 Comparator를 매개값으로 전달
+		Set<String> set = new TreeSet<String>(Collections.reverseOrder());
 		set.add("동");
 		set.add("서");
 		set.add("남");
 		set.add("북");
 		System.out.println(set);
+		
+		// 사용자 정의 객체로 정렬 테스트
+		// 1. Comparable로 기준 정렬 기준 구현 또는 2. TreeSet 생성 시 Comparator 구현으로 정렬 기준 제공
+		Set<Member> memberSet = new TreeSet<Member>();
+		// 정렬 기준이 없으면 예외 발생
+		memberSet.add(new Member("김재현", 30));
+		memberSet.add(new Member("이수진", 25));
+		memberSet.add(new Member("김민수", 40));
+		System.out.println(memberSet);
+		
+		
+		
+		
 	}
 
 }
