@@ -1,0 +1,42 @@
+package sec01.exam13.quiz;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Reader;
+import java.io.Writer;
+
+
+public class Quiz2 {
+//	Quiz
+//	"자바 프로그래밍입니다."가 저장된 "C:/Temp/test.txt" 파일을 
+//	"C:/Temp/test_copy.txt" 로 복사하는 코드를 구현해 보세요.
+	
+//	힌트: Reader를 사용해 원본 파일에서 읽어온 데이터를 Writer를 사용해 타겟 파일로 바로 출력
+	public static void main(String[] args) {
+		try(Reader reader = new FileReader("C:/Temp/test.txt");
+			Writer writer = new FileWriter("C:/Temp/test_copy.txt")) {
+			
+			// 방법1
+//			while(true) {
+//				int data = reader.read();
+//				if (data == -1) break;
+//				writer.write(data);
+//			}
+			
+			// 방법2
+			char[] buffer = new char[20];
+			int readCharNum = reader.read(buffer);
+			while (readCharNum != -1) {
+				writer.write(buffer, 0, readCharNum);
+			}
+			writer.flush();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		} 
+		
+		// 참고 : 이미지 파일 같은 바이너리 파일 복사는 바이트 기반 입출력 스트림을 사용하면 됨
+	}
+
+}
