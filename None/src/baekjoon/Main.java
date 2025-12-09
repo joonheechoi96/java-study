@@ -8,22 +8,39 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int target = sc.nextInt();
-		List<Integer> firstArr = new ArrayList<>();
-		firstArr.add(1);
-		int size = 2;
-		for(int i = 1; i <= 1000000000; i++) {
-			if (size > target) break;
-			firstArr.add(size);
-			size += 6*i;
-		} 
-		if (target == 1) {
-			System.out.println(1);
-		} else {
-			System.out.println(firstArr.size());
+		int n = sc.nextInt();
+		int m = sc.nextInt();
+		
+		int[] nums = new int[n];
+		
+		for(int i = 0; i < n; i++) {
+			nums[i] = sc.nextInt();
 		}
+		List<Integer> sums = new ArrayList<>();
+		
+		for(int i = 0; i < n; i++) {
+			int sum = 0;
+			sum += nums[i];
+			if (sum > m) continue;
+			for (int j = i+1; j < n; j++) {
+				sum += nums[j];
+				if (sum > m) continue;
+				for (int k = i+2; k < n; k++) {
+					sum += nums[k];
+					if (sum <= m) {
+						sums.add(sum);
+					}
+				}
+			}
+		}	
+		int max = sums.get(0);
+		
+		for (Integer n1 : sums) {
+			if (n1 > max) {
+				max = n1;
+			}
+		} System.out.println(max);
+		
+		
 	}
 }
-
-
-// 벌집 테두리 갯수 - 1, 6(2), 12(8), 18(20), 24
